@@ -1,4 +1,5 @@
 import QtQuick
+import "i18n"
 
 Rectangle {
     id: root
@@ -23,7 +24,7 @@ Rectangle {
         spacing: 13 * root.s
 
         Text {
-            text: "Система"
+            text: I18n.tr("System")
             color: root.white
             font.family: "Noto Sans"
             font.pixelSize: 16 * root.s
@@ -32,23 +33,23 @@ Rectangle {
         Row {
             spacing: 11 * root.s
             Icon { kind: "network"; width: 19 * root.s; height: 19 * root.s; ink: root.white }
-            Text { text: "Сеть"; color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
-            Text { text: root.state.network === "full" ? "В сети" : "Нет сети"; color: root.white; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
+            Text { text: I18n.tr("Network"); color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
+            Text { text: root.state.network === "full" ? I18n.tr("Online") : I18n.tr("Offline"); color: root.white; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
         }
         Row {
             spacing: 11 * root.s
             Icon { kind: "audio"; width: 19 * root.s; height: 19 * root.s; ink: root.white }
-            Text { text: "Звук"; color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
-            Text { text: root.state.muted ? "Без звука" : String(root.state.volume ?? 0) + "%"; color: root.white; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
+            Text { text: I18n.tr("Sound"); color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
+            Text { text: root.state.muted ? I18n.tr("Muted") : String(root.state.volume ?? 0) + "%"; color: root.white; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
         }
         Row {
             spacing: 11 * root.s
             Icon { kind: "battery"; width: 19 * root.s; height: 19 * root.s; ink: root.white; level: root.state.battery ?? 100 }
-            Text { text: "Батарея"; color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
+            Text { text: I18n.tr("Battery"); color: root.grey; width: 92 * root.s; font.family: "Noto Sans"; font.pixelSize: 12 * root.s }
             Text {
                 text: root.state.battery < 0 ? "--"
-                    : root.state.charging ? String(root.state.battery) + "% · Зарядка"
-                    : root.state.plugged ? String(root.state.battery) + "% · От сети"
+                    : root.state.charging ? String(root.state.battery) + "% · " + I18n.tr("Charging")
+                    : root.state.plugged ? String(root.state.battery) + "% · " + I18n.tr("On AC")
                     : String(root.state.battery) + "%"
                 color: root.state.battery >= 0 && root.state.battery <= 15 ? "#C8102E" : root.white
                 font.family: "Noto Sans"

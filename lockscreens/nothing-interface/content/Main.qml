@@ -9,6 +9,7 @@ Rectangle {
     height: Screen.height
     color: "#24262B"
     focus: true
+    onVisibleChanged: if (visible) password.forceActiveFocus()
 
     // Ryoku's in-session SDDM shim exposes fingerprintState; the system greeter
     // does not. Keep Quickshell-only imports in LiveData.qml.
@@ -83,9 +84,16 @@ Rectangle {
             if (videoLayer.item) videoLayer.item.sourceUrl = root.live.videoUrl
         }
     }
+    Keys.onPressed: {
+        if (event.key === Qt.Key_Tab) {
+            event.accepted = true
+            password.forceActiveFocus()
+        }
+    }
     Rectangle { anchors.fill: parent; color: "#550F1013" }
 
     Item {
+        id: contentItem
         width: 1072
         height: 528
         anchors.centerIn: parent

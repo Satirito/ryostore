@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "nothing-media",
   "category": "plugins",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "destination": "ryoku/plugins/nothing-media",
   "files": [
     {
@@ -40,25 +40,41 @@
     {
       "source": "bin/media.py",
       "destination": "bin/media.py",
-      "sha256": "cacb43232dbfeb5951315de0a8ab612fd3f3a043eeef12e2515c7b53b82d3a0c",
+      "sha256": "15cb7f9cba281e6cc866eb03d3de36ed22631c8194f8616dd90e19213cff04cd",
       "mode": "0755",
-      "size": 1151,
+      "size": 1941,
       "install": true
     },
     {
       "source": "content/Widget.qml",
       "destination": "content/Widget.qml",
-      "sha256": "df99e963ebada72b2c37d27c9f1f03fed3d92812f6f5ddab85f7649356e06113",
+      "sha256": "7433e24548af7f2bcd731ddb389f2ff37a2e18b946024c746783b8f7d32609b9",
       "mode": "0644",
-      "size": 8277,
+      "size": 8252,
+      "install": true
+    },
+    {
+      "source": "content/i18n/I18n.qml",
+      "destination": "content/i18n/I18n.qml",
+      "sha256": "7e5728925ff9505288b4a1856938d393b0a6bf77dcd012b32b028dd1ba915750",
+      "mode": "0644",
+      "size": 1926,
+      "install": true
+    },
+    {
+      "source": "content/i18n/qmldir",
+      "destination": "content/i18n/qmldir",
+      "sha256": "03839b003e8a97157fa9e4ef183c95b688c20dfcd5fcc76e5515280defcb0519",
+      "mode": "0644",
+      "size": 27,
       "install": true
     },
     {
       "source": "manifest.json",
       "destination": "manifest.json",
-      "sha256": "83a6bddb6cc317069432fac751f877cfcf5eb7d40bcc2343236004b8ed0e4b8c",
+      "sha256": "9c60ba4ef6396ecd519530a8d40d07732dc46520c4b327f491c6a393437d5dbe",
       "mode": "0644",
-      "size": 834,
+      "size": 867,
       "install": true
     },
     {

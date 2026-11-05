@@ -1,7 +1,7 @@
 {
   "id": "nothing-status",
   "name": "Nothing Status",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Ivan \u003c254410104+venchik111@users.noreply.github.com\u003e",
   "description": "Neutral Nothing OS-style status icons for the Ryoku bar.",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "panel": {
     "width": 320
   },
-  "files": ["content/Icon.qml", "bin/status.py", "assets/preview-widget.png"],
+  "files": ["content/Icon.qml", "bin/status.py", "assets/preview-widget.png", "content/i18n/I18n.qml", "content/i18n/qmldir"],
   "capabilities": {
     "densities": [
       "glyph",

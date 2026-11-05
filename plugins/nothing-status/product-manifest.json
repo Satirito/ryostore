@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "nothing-status",
   "category": "plugins",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "destination": "ryoku/plugins/nothing-status",
   "files": [
     {
@@ -48,9 +48,9 @@
     {
       "source": "content/Panel.qml",
       "destination": "content/Panel.qml",
-      "sha256": "f6f2b8705df3c40cb62a2c2c7a23aa036ed5002145ca8d9cb5875aa868c2db26",
+      "sha256": "d9b419c93ed1faa8e55a827427e047dcbb1db0d824b0977a894ce2e02956a34d",
       "mode": "0644",
-      "size": 2644,
+      "size": 2691,
       "install": true
     },
     {
@@ -62,11 +62,27 @@
       "install": true
     },
     {
+      "source": "content/i18n/I18n.qml",
+      "destination": "content/i18n/I18n.qml",
+      "sha256": "7e5728925ff9505288b4a1856938d393b0a6bf77dcd012b32b028dd1ba915750",
+      "mode": "0644",
+      "size": 1926,
+      "install": true
+    },
+    {
+      "source": "content/i18n/qmldir",
+      "destination": "content/i18n/qmldir",
+      "sha256": "03839b003e8a97157fa9e4ef183c95b688c20dfcd5fcc76e5515280defcb0519",
+      "mode": "0644",
+      "size": 27,
+      "install": true
+    },
+    {
       "source": "manifest.json",
       "destination": "manifest.json",
-      "sha256": "f797a26946c228dd028453a8116dc1d1a6e6a887e71df78e6b9ecbaf3857c926",
+      "sha256": "fde44f5f28874dfa1f2b7d4fcf5a07facdc8e289cd2e8373aaac193cd48a645e",
       "mode": "0644",
-      "size": 1353,
+      "size": 1401,
       "install": true
     },
     {

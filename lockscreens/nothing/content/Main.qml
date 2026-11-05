@@ -3,12 +3,14 @@ import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 import Qt.labs.folderlistmodel
 import SddmComponents 2.0
+import "i18n"
 
 Rectangle {
     id: root
     property date now: new Date()
     width: Screen.width
     height: Screen.height
+    onVisibleChanged: if (visible) pwd.forceActiveFocus()
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
@@ -22,7 +24,7 @@ Rectangle {
     property bool isQuickshell: typeof sddm === "undefined" || sddm.hostName === undefined
     property int sessionIndex: (typeof sessionModel !== "undefined" && sessionModel.lastIndex >= 0) ? sessionModel.lastIndex : 0
     property int userIndex: (typeof userModel !== "undefined" && userModel.lastIndex >= 0) ? userModel.lastIndex : 0
-    
+
     // UI States
     property real ui1: 0
     property real ui2: 0
@@ -68,7 +70,7 @@ Rectangle {
     Connections {
         target: typeof sddm !== "undefined" ? sddm : null
         function onLoginFailed() {
-            root.errorMessage = "ACCESS DENIED";
+            root.errorMessage = I18n.tr("ACCESS DENIED");
             pwd.text = "";
             shakeAnim.start();
             errTimer.start();
@@ -84,6 +86,12 @@ Rectangle {
     Component.onCompleted: {
         fadeAnim.start();
         if (typeof keyboard !== "undefined") keyboard.numLock = true;
+    }
+    Keys.onPressed: {
+        if (event.key === Qt.Key_Tab) {
+            event.accepted = true
+            pwd.forceActiveFocus()
+        }
     }
 
     SequentialAnimation {
@@ -117,7 +125,7 @@ Rectangle {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.margins: 40 * s
-        text: "AUTHENTICATE"
+        text: I18n.tr("AUTHENTICATE")
         font.family: pfDot.name
         font.pixelSize: 24 * s
         color: "#111111"
@@ -257,7 +265,7 @@ Rectangle {
                         
                         Text {
                             id: userNameText
-                            text: ((userHelper.currentItem && userHelper.currentItem.uName) ? userHelper.currentItem.uName : (userModel.lastUser || "USER")).toUpperCase()
+                            text: ((userHelper.currentItem && userHelper.currentItem.uName) ? userHelper.currentItem.uName : (userModel.lastUser || I18n.tr("USER"))).toUpperCase()
                             font.family: pfDot.source !== "" ? pfDot.name : root.sansFont
                             font.pixelSize: 16 * s
                             font.letterSpacing: 1.5 * s
@@ -323,7 +331,7 @@ Rectangle {
                         
                         Text {
                             anchors.centerIn: parent
-                            text: root.errorMessage !== "" ? root.errorMessage : "PASSWORD"
+                            text: root.errorMessage !== "" ? root.errorMessage : I18n.tr("PASSWORD")
                             font.family: pfDot.source !== "" ? pfDot.name : root.sansFont
                             font.pixelSize: 11 * s
                             font.letterSpacing: 1 * s
@@ -383,7 +391,7 @@ Rectangle {
                         spacing: 8 * s
                         
                         Text {
-                            text: "UNLOCK"
+                            text: I18n.tr("UNLOCK")
                             font.family: root.sansFont
                             font.pixelSize: 14 * s
                             font.letterSpacing: 2 * s
@@ -445,14 +453,14 @@ Rectangle {
                         anchors.centerIn: parent
                         spacing: 2 * s
                         Text {
-                            text: "P"
+                            text: I18n.tr("P")
                             font.family: pfDot.name
                             font.pixelSize: 36 * s
                             color: "#ffffff"
                             anchors.horizontalCenter: parent.horizontalCenter
                         }
                         Text {
-                            text: "POWER"
+                            text: I18n.tr("POWER")
                             font.family: root.sansFont
                             font.pixelSize: 9 * s
                             font.bold: true
@@ -487,7 +495,7 @@ Rectangle {
                         spacing: 2 * s
                         width: parent.width - 16 * s
                         Text {
-                            text: "S"
+                            text: I18n.tr("S")
                             font.family: pfDot.name
                             font.pixelSize: 36 * s
                             color: sessionMouse.containsMouse ? "#111111" : "#ffffff"
@@ -495,7 +503,7 @@ Rectangle {
                             Behavior on color { ColorAnimation { duration: 150 } }
                         }
                         Text {
-                            text: ((sessionHelper.currentItem && sessionHelper.currentItem.sName) ? sessionHelper.currentItem.sName : "PLASMA").toUpperCase()
+                            text: ((sessionHelper.currentItem && sessionHelper.currentItem.sName) ? sessionHelper.currentItem.sName : I18n.tr("PLASMA")).toUpperCase()
                             font.family: root.sansFont
                             font.pixelSize: 8 * s
                             font.bold: true
@@ -537,7 +545,7 @@ Rectangle {
                         anchors.centerIn: parent
                         spacing: 2 * s
                         Text {
-                            text: "R"
+                            text: I18n.tr("R")
                             font.family: pfDot.name
                             font.pixelSize: 36 * s
                             color: rebootMouse.containsMouse ? "#111111" : "#ffffff"
@@ -545,7 +553,7 @@ Rectangle {
                             Behavior on color { ColorAnimation { duration: 150 } }
                         }
                         Text {
-                            text: "REBOOT"
+                            text: I18n.tr("REBOOT")
                             font.family: root.sansFont
                             font.pixelSize: 9 * s
                             font.bold: true
@@ -580,14 +588,14 @@ Rectangle {
                         anchors.centerIn: parent
                         spacing: 2 * s
                         Text {
-                            text: "Z"
+                            text: I18n.tr("Z")
                             font.family: pfDot.name
                             font.pixelSize: 36 * s
                             color: "#ea1821"
                             anchors.horizontalCenter: parent.horizontalCenter
                         }
                         Text {
-                            text: "SLEEP"
+                            text: I18n.tr("SLEEP")
                             font.family: root.sansFont
                             font.pixelSize: 9 * s
                             font.bold: true

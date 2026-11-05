@@ -1537,7 +1537,7 @@
     {
       "id": "nothing-dashboard",
       "name": "Nothing Battery",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "path": "plugins/nothing-dashboard",
       "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
       "upstream": "https://github.com/venchik111/ryoku-nothing-interface/tree/main/plugins/nothing-dashboard",
@@ -1554,7 +1554,7 @@
         "assets/preview-widget.png"
       ],
       "manifest": "product-manifest.json",
-      "manifestSha256": "7769c40047b70e5a0b4443d4751061897a1b1833f5eb76594c2783a059a86671",
+      "manifestSha256": "d7dab85e3ce4ff1249574495b3dfebdf0fb0d5a6b91438a9ce359dff940432c8",
       "official": false,
       "license": "MIT",
       "tagline": "Nothing Interface for Ryoku",
@@ -1562,12 +1562,12 @@
       "hosts": [
         "desktopWidget"
       ],
-      "lastUpdated": "2026-10-01"
+      "lastUpdated": "2026-11-05"
     },
     {
       "id": "nothing-media",
       "name": "Nothing Media",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "path": "plugins/nothing-media",
       "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
       "upstream": "https://github.com/venchik111/ryoku-nothing-interface/tree/main/plugins/nothing-media",
@@ -1584,7 +1584,7 @@
         "assets/preview-widget.png"
       ],
       "manifest": "product-manifest.json",
-      "manifestSha256": "c72b805bc19bb7ed9d729fe019b25cc6aa21305267e57725f5f742a4f6b92d15",
+      "manifestSha256": "7c3781252b96f34ef39e1801a07fb81aaea96fa5317b981cd1181b3fa9c16c62",
       "official": false,
       "license": "MIT",
       "tagline": "Nothing Interface for Ryoku",
@@ -1592,7 +1592,7 @@
       "hosts": [
         "desktopWidget"
       ],
-      "lastUpdated": "2026-10-01"
+      "lastUpdated": "2026-11-05"
     },
     {
       "id": "nothing-screen-time",
@@ -1627,7 +1627,7 @@
     {
       "id": "nothing-status",
       "name": "Nothing Status",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "path": "plugins/nothing-status",
       "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
       "upstream": "https://github.com/venchik111/ryoku-nothing-interface/tree/main/plugins/nothing-status",
@@ -1644,7 +1644,7 @@
         "assets/preview-widget.png"
       ],
       "manifest": "product-manifest.json",
-      "manifestSha256": "8e4f44ae8e69cbfc9a053bf14072d9d5ccc1b7e8b0229e32ac7f9b9401584e82",
+      "manifestSha256": "84d87f462e859543ac96d082e1e23f71988ae6778ba9ec0880704427d9e1f66c",
       "official": false,
       "license": "MIT",
       "tagline": "Nothing Interface for Ryoku",
@@ -1652,7 +1652,7 @@
       "hosts": [
         "topbarGlyph"
       ],
-      "lastUpdated": "2026-10-01"
+      "lastUpdated": "2026-11-05"
     },
     {
       "id": "goxlr",

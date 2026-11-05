@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "nothing",
   "category": "lockscreens",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "destination": "qylock/themes/nothing",
   "files": [
     {
@@ -33,8 +33,8 @@
       "source": "content/Main.qml",
       "destination": "Main.qml",
       "mode": "0644",
-      "size": 26565,
-      "sha256": "2beb020ee91643991e17025ba37c3158aefabbcfb16563d4637d1570446ac898",
+      "size": 26888,
+      "sha256": "3b1489a260ae42d9fef74b834508f254f62fa4cdb679dac7c79b2d01bce0b556",
       "install": true
     },
     {
@@ -67,6 +67,22 @@
       "mode": "0644",
       "size": 48,
       "sha256": "1c4f9cd70c26c41b5d0017e71f20f07440fe85f25ddac26512fcb1d12fbe5fe6",
+      "install": true
+    },
+    {
+      "source": "content/i18n/I18n.qml",
+      "destination": "i18n/I18n.qml",
+      "mode": "0644",
+      "size": 1926,
+      "sha256": "7e5728925ff9505288b4a1856938d393b0a6bf77dcd012b32b028dd1ba915750",
+      "install": true
+    },
+    {
+      "source": "content/i18n/qmldir",
+      "destination": "i18n/qmldir",
+      "mode": "0644",
+      "size": 27,
+      "sha256": "03839b003e8a97157fa9e4ef183c95b688c20dfcd5fcc76e5515280defcb0519",
       "install": true
     }
   ]

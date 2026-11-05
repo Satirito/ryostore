@@ -356,7 +356,7 @@
     {
       "id": "nothing",
       "name": "Nothing OS",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "path": "lockscreens/nothing",
       "author": "Darkkal44",
       "upstream": "https://github.com/Darkkal44/qylock",
@@ -374,7 +374,7 @@
         "assets/preview.gif"
       ],
       "manifest": "manifest.json",
-      "manifestSha256": "c59741f9666945fa068283813b76705b21280d2f5d74c302f79731653fcfb7c0"
+      "manifestSha256": "45fd04cd36bd160acb23947aef83a4f53ec9f4b9764c06de35d68cabf0d1ec9c"
     },
     {
       "id": "osu",
@@ -913,7 +913,7 @@
     {
       "id": "nothing-interface",
       "name": "Nothing Interface",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "path": "lockscreens/nothing-interface",
       "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
       "upstream": "https://github.com/venchik111/ryoku-nothing-interface",
@@ -932,10 +932,10 @@
         "assets/preview.png"
       ],
       "manifest": "manifest.json",
-      "manifestSha256": "3d68e4934b6f4acffa8580a96705fd34fa76b20336326db5ff7585d4a3db8a59",
+      "manifestSha256": "655e38e37d2fd2ef73454e4b292737450d667b2cb5c88271ff5c0ef039724e00",
       "official": false,
       "license": "MIT",
-      "lastUpdated": "2026-10-01"
+      "lastUpdated": "2026-11-05"
     }
   ]
 }

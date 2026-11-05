@@ -1,7 +1,7 @@
 {
   "id": "nothing-media",
   "name": "Nothing Media",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
   "description": "Nothing OS-style media tile with local MPRIS playback control.",
   "license": "MIT",
@@ -16,7 +16,9 @@
   "files": [
     "bin/media.py",
     "assets/preview-widget.png",
-    "assets/preview-widget.svg"
+    "assets/preview-widget.svg",
+    "content/i18n/I18n.qml",
+    "content/i18n/qmldir"
   ],
   "capabilities": {
     "densities": [

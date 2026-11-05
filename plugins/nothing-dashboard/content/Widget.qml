@@ -1,4 +1,5 @@
 import QtQuick
+import "i18n"
 
 Rectangle {
     id: root
@@ -90,7 +91,7 @@ Rectangle {
         visible: root.plugged
         x: 19 * root.s
         y: 137 * root.s
-        text: root.charging ? "Заряжается" : "Питание от сети"
+        text: root.charging ? I18n.tr("Charging") : I18n.tr("On AC")
         color: "#B1B3B3"
         font.family: "Noto Sans"
         font.pixelSize: 12 * root.s

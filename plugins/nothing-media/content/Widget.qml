@@ -1,4 +1,5 @@
 import QtQuick
+import "i18n"
 
 Rectangle {
     id: root
@@ -13,7 +14,7 @@ Rectangle {
     readonly property var frame: service ? service.lyricFrame : ({})
     readonly property bool available: state.available === true
     readonly property bool playing: state.playing === true
-    readonly property string titleText: available ? (state.title || "Музыка") : "Ничего не играет"
+    readonly property string titleText: available ? (state.title || I18n.tr("Music")) : I18n.tr("Nothing playing")
     readonly property string artistText: available ? (state.artist || " ") : " "
     readonly property string artUrl: available ? String(state.artUrl || "") : ""
     readonly property real position: Number(state.position || 0)
@@ -206,10 +207,10 @@ Rectangle {
             visible: root.plainLines.length === 0 && root.syncedLines.length === 0
             width: parent.width - 24 * root.s
             horizontalAlignment: Text.AlignHCenter
-            text: !root.available ? "Включите музыку"
-                : root.lyricsStatus === "loading" ? "Ищем текст песни…"
-                : root.lyricsStatus === "error" ? "Текст недоступен"
-                : "Текст песни не найден"
+            text: !root.available ? I18n.tr("Start music")
+                : root.lyricsStatus === "loading" ? I18n.tr("Finding lyrics…")
+                : root.lyricsStatus === "error" ? I18n.tr("Lyrics unavailable")
+                : I18n.tr("No lyrics found")
             color: "#B1B3B3"
             font.family: "Noto Sans"; font.pixelSize: 13 * root.s
         }
